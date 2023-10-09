@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://tdxugs25w5rf"]
+
+[ext_resource type="Script" path="res://star_system/StarSystem.gd" id="1_2x8tw"]
+[ext_resource type="Texture2D" uid="uid://8qid3w8plnbx" path="res://star_system/art/background.png" id="2_32hya"]
+
+[node name="StarSystem" type="Node2D"]
+script = ExtResource("1_2x8tw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.64, 0.64)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 0.1)
+
+[node name="Background" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+scale = Vector2(2, 2)
+texture = ExtResource("2_32hya")
