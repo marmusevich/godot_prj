@@ -1,30 +1,26 @@
 extends Node2D
 
-
-
 @onready var camera := $Camera2D as Camera2D
-
 @onready var star_scene: PackedScene = preload("res://star_system/star.tscn")
-@onready var planet_scene: PackedScene = preload("res://star_system/PlanetaryObject.tscn")
+@onready var planetaryObject_scene: PackedScene = preload("res://star_system/PlanetaryObject.tscn")
 
+var systemInfo : StarSystemInfo = null
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	print("--------------------------------------------")
-	var system := StarSystemWorker.generate_info(null)
+	systemInfo = StarSystemWorker.generate_info(null)
 	#print(inst_to_dict(sys))
-	var star := system.star
+	#var star := systemInfo.star
 	add_child(star_scene.instantiate())
-	#print(inst_to_dict(star))
-	#print("------")
-	for o in system.objects :
+	for o in systemInfo.objects :
 		var pl = o as StarSystemInfo.PlanetInfo
 		if pl == null : continue
 		
 		print("planet name ", pl.name)
-		var planet = planet_scene.instantiate()
-		planet.info = pl
+		var planet := planetaryObject_scene.instantiate()
+		planet.info_data = pl
 		add_child(planet)
 
 
