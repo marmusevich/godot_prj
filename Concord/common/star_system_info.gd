@@ -39,7 +39,6 @@ class PlanetInfo extends PlanetaryInfo:
 	# moons or rings
 	var objects : Array[MoonInfo] = []
 
-
 #
 class MoonInfo extends PlanetaryInfo:
 	pass
