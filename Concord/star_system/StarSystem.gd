@@ -5,6 +5,7 @@ extends Node2D
 @onready var planetaryObject_scene: PackedScene = preload("res://star_system/PlanetaryObject.tscn")
 
 var systemInfo : StarSystemInfo = null
+@export var tic : int = 0
 
 
 # Called when the node enters the scene tree for the first time.
@@ -49,7 +50,7 @@ func _process(delta):
 	
 		camera.position += d 
 	#scroll screen - end
-
+	
 	pass
 		
 		
@@ -73,3 +74,6 @@ func _input(event: InputEvent):
 	elif event.is_action_pressed(&"move_down"):
 		camera.position.y += 10
 		print("position = ", camera.position)
+	elif event.is_action_pressed(&"jump"):
+		Global.isTicEnabled = not Global.isTicEnabled
+

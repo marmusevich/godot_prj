@@ -13,11 +13,11 @@ var radius : float = 0
 func _ready() -> void:
 	if info_data == null : return
 	
-	speed = info_data.speed / 500
-	radius = info_data.radius * 800 + 100
+	speed = info_data.speed #/ 10
+	radius = info_data.radius * 1100 + 100
 		
 	var name = info_data.name
-	#print("name  >", name, "<  speed ", speed, " radius ", radius)
+	print("name  >", name, "<  speed ", speed, " radius ", radius)
 	
 	
 	#var info = get_parent().info
@@ -48,6 +48,9 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if info_data == null : return
-	var t = Time.get_ticks_msec()
+	
+	Global.tic
+	
+	var t = Global.tic #Time.get_ticks_msec()
 	var angl = (deg_to_rad(t) * speed + info_data.start_angle) * (+1 if info_data.direction == StarSystemInfo.OrbitDirection.DIRECT else -1)
 	position = Vector2(radius * sin(angl), radius * cos(angl))

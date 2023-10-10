@@ -99,7 +99,7 @@ static func generate_info(_state : StarSystemInfo.StarSystemGeneratorState) -> S
 	moon.mass = baseMass * 0.2
 	moon.radius = calc_radius(1) #we have only once moon :)
 	moon.start_angle = 0
-	moon.speed = 1.23
+	moon.speed = 1.23*60
 	moon.size = StarSystemInfo.PlanetSize.TINY
 	moon.name = "Moon"
 	moon.spin = StarSystemInfo.RotationSpin.DIRECT # direct means same as parent when generate
