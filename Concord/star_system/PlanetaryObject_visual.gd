@@ -36,7 +36,7 @@ func _ready() -> void:
 	if info_data != null :
 		var sc = 0.2 * calcSize(info_data.size)
 		scale = Vector2(sc, sc)
-		$Sphere.texture = load("res://star_system/art/kenney_planets/light%02d.png" % randi_range(0, 10))
+		$Sphere.texture = load("res://star_system/art/kenney_planets/light%d.png" % randi_range(0, 10))
 		$Noise.texture = load("res://star_system/art/kenney_planets/noise%02d.png" % randi_range(0, 27))
 		$Light.texture = load("res://star_system/art/kenney_planets/sphere%d.png" % randi_range(0, 2))
 		#var random_color = Color(randf(), randf(), randf())
