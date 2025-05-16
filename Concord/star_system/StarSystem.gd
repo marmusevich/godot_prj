@@ -76,4 +76,3 @@ func _input(event: InputEvent):
 		print("position = ", camera.position)
 	elif event.is_action_pressed(&"jump"):
 		Global.isTicEnabled = not Global.isTicEnabled
-

@@ -14,7 +14,7 @@ enum PlanetSize { TINY, SMALL, NORMAL, BIG, LARGE }
 
 
 class StarInfo extends Object:
-	var tipe : = StellarType.NORMAL
+	var tipe : = StellarType.NORMAL # type
 	var spectr : = StellarSpectr.YELLOW
 	var mass : float = 0
 	var name : StringName = ""

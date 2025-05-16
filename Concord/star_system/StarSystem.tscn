@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://tdxugs25w5rf"]
 
-[ext_resource type="Script" path="res://star_system/StarSystem.gd" id="1_2x8tw"]
+[ext_resource type="Script" uid="uid://b2y8mpog8cgxt" path="res://star_system/StarSystem.gd" id="1_2x8tw"]
 [ext_resource type="PackedScene" uid="uid://7jrrkensrbc4" path="res://star_system/BackGround.tscn" id="2_smheo"]
 
 [node name="StarSystem" type="Node2D"]
