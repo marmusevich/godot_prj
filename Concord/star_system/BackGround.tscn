@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://7jrrkensrbc4"]
+
+[ext_resource type="Texture2D" uid="uid://8qid3w8plnbx" path="res://star_system/art/background.png" id="1_8m3mj"]
+
+[node name="root" type="Node2D"]
+
+[node name="parallax" type="ParallaxBackground" parent="."]
+scroll_ignore_camera_zoom = true
+
+[node name="back" type="ParallaxLayer" parent="parallax"]
+motion_scale = Vector2(0.1, 0.1)
+motion_mirroring = Vector2(3360, 2100)
+
+[node name="img" type="Sprite2D" parent="parallax/back"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8m3mj")

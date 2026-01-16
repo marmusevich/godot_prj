@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://b1yeeuahm5am4"]
+
+[ext_resource type="Script" uid="uid://cfkq5qspr6n2r" path="res://star_system/PlanetaryObject.gd" id="1_mrfh1"]
+[ext_resource type="Script" uid="uid://c6mjj2443kp38" path="res://star_system/PlanetaryObject_visual.gd" id="2_ckw7i"]
+
+[node name="PlanetaryObject" type="Node2D"]
+script = ExtResource("1_mrfh1")
+
+[node name="visual" type="Node2D" parent="."]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_ckw7i")
+
+[node name="Sphere" type="Sprite2D" parent="visual"]
+modulate = Color(0, 1, 0, 1)
+position = Vector2(332, 271)
+
+[node name="Noise" type="Sprite2D" parent="visual"]
+modulate = Color(1, 0, 0, 1)
+position = Vector2(332, 271)
+
+[node name="Light" type="Sprite2D" parent="visual"]
+modulate = Color(1, 1, 1, 0.5)
+position = Vector2(332, 271)
