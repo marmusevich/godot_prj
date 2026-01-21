@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bw8wn8v4j0n0j"]
+
+[ext_resource type="Script" uid="uid://bnevee5ubhnhv" path="res://animated_count.gd" id="1_e3waj"]
+
+[node name="AnimatedCount" type="Label"]
+offset_right = 388.0
+offset_bottom = 67.0
+theme_override_font_sizes/font_size = 28
+text = "0"
+script = ExtResource("1_e3waj")
