@@ -1,0 +1,95 @@
+assets|All visual/audio assets (no game logic)
+assets\audio|Music and sound effects
+assets\audio\music|Background music
+assets\audio\sfx|Sound effects
+assets\sprites|2D sprites (characters, objects)
+assets\sprites\units|Unit sprites (soldiers, enemies)
+assets\sprites\ui|UI sprites
+assets\sprites\environment|Environment sprites
+assets\sprites\effects|Particle/effect sprites
+assets\tilesets|Godot TileSets
+assets\tilesets\tactical|TileSets for tactical missions
+assets\tilesets\geoscape|TileSets for global map
+assets\tilesets\base|TileSets for base
+assets\fonts|Fonts
+assets\shaders|Shaders (2D effects)
+assets\ui|UI layouts (scenes, control templates)
+assets\ui\common|Reusable UI elements
+assets\ui\menus|Main menu, settings, pause, etc.
+assets\ui\hud|In-game HUD (mission, base, geoscape)
+
+data|Game data (resources, balance, definitions)
+data\units|Unit definitions and stats
+data\weapons|Weapons definitions
+data\items|Items and equipment
+data\abilities|Abilities and skills
+data\research|Research tree
+data\buildings|Base buildings and upgrades
+data\missions|Mission definitions and metadata
+data\maps|Map definitions (tile layout, spawn points)
+data\ai|AI data (utility/GOAP weights, behaviors)
+data\balance|Global balance constants
+data\localization|Text localization files
+data\save|Save templates (if any)
+
+core|Pure game logic (engine-agnostic)
+core\world|Global game state and time progression
+core\geoscape|Geoscape world logic (global map)
+core\base|Base management logic (construction, resources)
+core\tactical|Tactical combat logic (turn system, actions)
+core\combat|Combat rules, damage, cover, line-of-fire
+core\visibility|LOS, fog of war, vision/stealth
+core\ai|AI planners (utility / GOAP), decision making
+core\pathfinding|Pathfinding (A*, navgrid)
+core\inventory|Inventory and equipment systems
+core\save|Save/load logic (serialization)
+core\events|Event system (signals between systems)
+
+modes|Game modes (each mode has scenes + controllers)
+modes\geoscape|Global strategy mode (world map)
+modes\base|Base management mode (construction, research)
+modes\tactical|Tactical combat mode (missions)
+modes\common|Mode-independent controllers (shared UI, camera)
+
+systems|Godot-specific adapters and helpers
+systems\input|Input mapping and handling
+systems\camera|Camera controllers
+systems\audio|Audio managers
+systems\animation|Animation helpers
+systems\debug|Debug overlays and tools
+
+autoload|Singletons (autoloads)
+autoload\GameState|Global game state singleton
+autoload\ModManager|Mods/DLC manager
+autoload\SaveManager|Save/load manager
+autoload\AudioManager|Audio singleton
+autoload\UIManager|UI singleton
+
+mods|Mods and DLC packages
+mods\example_mod|Example mod structure
+mods\example_mod\data|Mod gameplay data
+mods\example_mod\assets|Mod assets
+mods\example_mod\overrides|Overrides of base game content
+mods\example_mod\scripts|Optional mod scripts
+
+scenes|Main scenes (entry points)
+scenes\Main.tscn|Main game scene
+scenes\Loading.tscn|Loading screen
+scenes\Menu.tscn|Main menu
+scenes\Splash.tscn|Splash screen
+
+scripts|Utility scripts (tools, extensions)
+scripts\tools|Editor tools and helpers
+scripts\helpers|Small reusable helpers
+
+tests|Unit/integration tests (logic-only)
+tests\core|Core logic tests
+tests\ai|AI tests
+tests\pathfinding|Pathfinding tests
+tests\data|Data validation tests
+
+docs|Documentation
+docs\architecture|Architecture notes
+docs\design|Game design docs
+docs\modding|Modding guide
+docs\todo|TODO list and roadmap

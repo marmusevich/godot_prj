@@ -1,0 +1,44 @@
+assets|All visual/audio assets
+assets\audio|Music and sound effects
+assets\sprites|2D sprites
+assets\sprites\units|Units (player/enemies)
+assets\sprites\ui|UI elements
+assets\tilesets|TileSets for maps
+
+data|Game data (stats, definitions)
+data\units|Unit definitions
+data\weapons|Weapons / equipment
+data\missions|Mission definitions
+data\balance|Balance values
+
+core|Game logic (engine-independent)
+core\world|Global game state
+core\geoscape|Global map logic
+core\tactical|Tactical mode logic
+core\combat|Combat rules and LOS
+core\ai|AI logic (utility / GOAP)
+
+modes|Game modes (scenes + controllers)
+modes\geoscape|Global map mode
+modes\tactical|Tactical mission mode
+modes\common|Shared controllers
+
+ui|UI scenes and controllers
+ui\menus|Main menu, pause menu
+ui\hud|In-game HUD
+
+autoload|Singletons (autoloads)
+autoload\GameState|Global game state singleton
+autoload\SaveManager|Save/load
+autoload\AudioManager|Audio
+
+scenes|Main scenes
+scenes\Main.tscn|Main scene
+scenes\Menu.tscn|Menu scene
+scenes\Game.tscn|Game entry scene
+
+mods|Optional mods (if needed)
+mods\example_mod|Example mod package
+
+tests|Simple tests (optional)
+tests\core|Core logic tests
