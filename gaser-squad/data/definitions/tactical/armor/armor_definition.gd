@@ -1,5 +1,7 @@
-extends Resource
+extends BaseDefinition
 class_name ArmorDefinition
+
+const CommonEnums = preload("res://data/definitions/tactical/enums.gd")
 
 ## ============================================================
 ## ENUMS
@@ -12,46 +14,14 @@ enum ArmorSlot {
 	FULL_BODY    # Full body (скафандр, экзоскелет)
 }
 
-enum Platform {
-	INFANTRY,    # Infantry (человек)
-	DRONE,       # Drone
-	VEHICLE      # Vehicle (танк, БТР)
-}
-
-enum DamageType {
-	KINETIC,     # Kinetic (кинетический)
-	ENERGY,      # Energy (энергетический)
-	THERMAL      # Thermal (термический)
-}
-
-enum HitSide {
-	FRONT,       # Front (перед)
-	BACK,        # Back (зад)
-	LEFT,        # Left
-	RIGHT        # Right
-}
-
-## ============================================================
-## IDENTITY
-## ============================================================
-
-@export var id: String
-@export var display_name: String
-@export var icon: Texture2D
 
 ## ============================================================
 ## CLASSIFICATION
 ## ============================================================
 
 @export var slot: ArmorSlot
-@export var allowed_platforms: Array[Platform]
+@export var allowed_platforms: Array[CommonEnums.Platform]
 
-## ============================================================
-## ECONOMY & META
-## ============================================================
-
-@export var price: int = 0              # Price (цена)
-@export var weight: float = 0.0         # Weight (вес)
 
 ## ============================================================
 ## ARMOR PROTECTION
@@ -59,25 +29,25 @@ enum HitSide {
 ## armor[HitSide][DamageType] = value
 
 @export var armor := {
-	HitSide.FRONT: {
-		DamageType.KINETIC: 0.0,
-		DamageType.ENERGY: 0.0,
-		DamageType.THERMAL: 0.0
+	CommonEnums.HitSide.FRONT: {
+		CommonEnums.DamageType.KINETIC: 0.0,
+		CommonEnums.DamageType.ENERGY: 0.0,
+		CommonEnums.DamageType.THERMAL: 0.0
 	},
-	HitSide.BACK: {
-		DamageType.KINETIC: 0.0,
-		DamageType.ENERGY: 0.0,
-		DamageType.THERMAL: 0.0
+	CommonEnums.HitSide.BACK: {
+		CommonEnums.DamageType.KINETIC: 0.0,
+		CommonEnums.DamageType.ENERGY: 0.0,
+		CommonEnums.DamageType.THERMAL: 0.0
 	},
-	HitSide.LEFT: {
-		DamageType.KINETIC: 0.0,
-		DamageType.ENERGY: 0.0,
-		DamageType.THERMAL: 0.0
+	CommonEnums.HitSide.LEFT: {
+		CommonEnums.DamageType.KINETIC: 0.0,
+		CommonEnums.DamageType.ENERGY: 0.0,
+		CommonEnums.DamageType.THERMAL: 0.0
 	},
-	HitSide.RIGHT: {
-		DamageType.KINETIC: 0.0,
-		DamageType.ENERGY: 0.0,
-		DamageType.THERMAL: 0.0
+	CommonEnums.HitSide.RIGHT: {
+		CommonEnums.DamageType.KINETIC: 0.0,
+		CommonEnums.DamageType.ENERGY: 0.0,
+		CommonEnums.DamageType.THERMAL: 0.0
 	}
 }
 
@@ -107,8 +77,8 @@ enum HitSide {
 ## HELPERS
 ## ============================================================
 
-func supports_platform(platform: Platform) -> bool:
+func supports_platform(platform: CommonEnums.Platform) -> bool:
 	return platform in allowed_platforms
 
-func armor_value(side: HitSide, damage_type: DamageType) -> float:
+func armor_value(side: CommonEnums.HitSide, damage_type: CommonEnums.DamageType) -> float:
 	return armor.get(side, {}).get(damage_type, 0.0)

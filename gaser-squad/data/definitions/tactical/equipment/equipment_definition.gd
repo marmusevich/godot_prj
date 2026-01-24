@@ -1,0 +1,2 @@
+extends BaseDefinition
+class_name EquipmentDefinition

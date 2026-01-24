@@ -2,12 +2,6 @@ class_name ArmorState
 extends Object
 
 ## ============================================================
-## DEFINITION (WRITE-ONCE)
-## ============================================================
-
-var _definition: ArmorDefinition
-
-## ============================================================
 ## RUNTIME STATE
 ## ============================================================
 
@@ -19,7 +13,7 @@ var _modifiers: Array = []   # ModifierState[]
 ## ============================================================
 
 func _init(definition: ArmorDefinition):
-	assert(definition != null, "ArmorState requires ArmorDefinition")
+	.super(definition)
 	_definition = definition
 	_durability = definition.base_durability
 

@@ -1,12 +1,5 @@
-# res://data/state/weapon_state.gd
+extends BaseState
 class_name WeaponState
-extends Object
-
-## ============================================================
-## DEFINITION (WRITE-ONCE)
-## ============================================================
-
-var _definition: WeaponDefinition
 
 ## ============================================================
 ## RUNTIME STATE
@@ -14,7 +7,6 @@ var _definition: WeaponDefinition
 
 var _ammo: int
 var _durability: float
-
 var _modifiers: Array = []   # ModifierState[]
 
 ## ============================================================
@@ -22,8 +14,7 @@ var _modifiers: Array = []   # ModifierState[]
 ## ============================================================
 
 func _init(definition: WeaponDefinition):
-	assert(definition != null, "WeaponState requires WeaponDefinition")
-	_definition = definition
+	.super(definition)
 	_ammo = definition.magazine_capacity
 	_durability = definition.base_durability
 
@@ -140,3 +131,11 @@ func _apply_modifiers(method: String, base_value):
 		if m.has_method(method):
 			value = m.call(method, value)
 	return value
+
+
+
+
+
+
+
+
