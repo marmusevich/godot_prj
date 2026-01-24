@@ -1,3 +1,0 @@
-# data\weapons
-
-Weapons definitions
