@@ -1,5 +1,5 @@
+extends BaseState
 class_name ArmorState
-extends Object
 
 ## ============================================================
 ## RUNTIME STATE
@@ -13,8 +13,7 @@ var _modifiers: Array = []   # ModifierState[]
 ## ============================================================
 
 func _init(definition: ArmorDefinition):
-	.super(definition)
-	_definition = definition
+	super(definition)
 	_durability = definition.base_durability
 
 ## ============================================================
@@ -41,7 +40,7 @@ func modifiers() -> Array:
 ## COMPUTED STATS
 ## ============================================================
 
-func armor_value(side, damage_type) -> float:
+func armor_value(side : CommonEnums.HitSide, damage_type : CommonEnums.DamageType) -> float:
 	var base = _definition.armor_value(side, damage_type)
 	return _apply_modifiers("modify_armor", base, side, damage_type)
 
@@ -86,7 +85,7 @@ func active_effects_description() -> Array:
 ## INTERNAL
 ## ============================================================
 
-func _apply_modifiers(method: String, base_value, side := null, damage_type := null):
+func _apply_modifiers(method: String, base_value, side = null, damage_type = null):
 	var value = base_value
 	for m in _modifiers:
 		if m.has_method(method):

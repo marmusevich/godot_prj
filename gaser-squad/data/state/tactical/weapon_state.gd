@@ -14,7 +14,7 @@ var _modifiers: Array = []   # ModifierState[]
 ## ============================================================
 
 func _init(definition: WeaponDefinition):
-	.super(definition)
+	super(definition)
 	_ammo = definition.magazine_capacity
 	_durability = definition.base_durability
 
@@ -131,11 +131,3 @@ func _apply_modifiers(method: String, base_value):
 		if m.has_method(method):
 			value = m.call(method, value)
 	return value
-
-
-
-
-
-
-
-

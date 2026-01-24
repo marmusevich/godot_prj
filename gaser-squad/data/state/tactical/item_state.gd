@@ -1,13 +1,11 @@
 extends BaseState
 class_name ItemState
 
-
 var quantity: int = 1
 
 func _init(def: ItemDefinition, qty := 1):
-	.super(def)
+	super(def)
 	quantity = qty
 
 func weight() -> float:
-	return definition.weight * quantity
-
+	return _definition.weight * quantity

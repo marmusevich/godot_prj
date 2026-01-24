@@ -1,9 +1,6 @@
 extends BaseDefinition
 class_name WeaponDefinition
 
-const CommonEnums = preload("res://data/definitions/tactical/enums.gd")
-
-
 
 ## ============================================================
 ## CLASSIFICATION
