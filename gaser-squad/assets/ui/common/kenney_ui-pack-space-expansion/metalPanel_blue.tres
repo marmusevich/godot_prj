@@ -1,0 +1,7 @@
+[gd_resource type="AtlasTexture" format=3 uid="uid://cwq8lc5rlhr0d"]
+
+[ext_resource type="Texture2D" uid="uid://fhjhqxqye76v" path="res://assets/ui/common/kenney_ui-pack-space-expansion/uipackSpace_sheet.png" id="1_566na"]
+
+[resource]
+atlas = ExtResource("1_566na")
+region = Rect2(200, 100, 100, 100)
