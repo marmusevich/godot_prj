@@ -1,2 +1,2 @@
-extends BaseDefinition
-class_name EquipmentDefinition
+class_name EquipmentDefinition extends BaseDefinition
+

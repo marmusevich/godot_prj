@@ -1,5 +1,4 @@
-extends Object
-class_name UnitState
+class_name UnitState extends Object
 
 var inventory: InventoryComponent
 var equipment: EquipmentComponent
@@ -45,9 +44,9 @@ func _init(def: UnitDefinition):
 	# add starting weapons (weapon definitions -> states)
 	for weapon_def in def.starting_weapons:
 		var ws = WeaponState.new(weapon_def)
-		inventory.add_item(ws) # если хочешь хранить оружие в инвентаре
+		inventory.add_item(ws)
 
 	# add starting armor
 	for armor_def in def.starting_armor:
-		var as = ArmorState.new(armor_def)
-		inventory.add_item(as)
+		var ast = ArmorState.new(armor_def)
+		inventory.add_item(ast)

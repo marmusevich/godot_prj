@@ -1,5 +1,4 @@
-extends Object
-class_name EquipmentComponent
+class_name EquipmentComponent extends Object
 
 var weapon_main: WeaponState = null
 var weapon_offhand: WeaponState = null

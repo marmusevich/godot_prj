@@ -1,28 +1,30 @@
-extends Resource
-class_name CommonEnums
+class_name CommonEnums extends Resource
 
 
 # ------------------------------------------------------------
-# Damage type (тип урона)
-# ------------------------------------------------------------
+## Damage type (тип урона)
 enum DamageType {
-	KINETIC,      # Kinetic (кинетический)
-	ENERGY,       # Energy (энергетический)
-	THERMAL       # Thermal (термический)
+	## Kinetic (кинетический)
+	KINETIC,
+	## Energy (энергетический)
+	ENERGY,
+	## Thermal (термический)
+	THERMAL
 }
 
 # ------------------------------------------------------------
-# Platforms (платформы/носители)
-# ------------------------------------------------------------
+## Platforms (платформы/носители)
 enum Platform {
-	INFANTRY,     # Infantry (пехота)
-	DRONE,        # Drones
-	VEHICLE       # Vehicles (колёсная/гусеничная техника)	
+	## Infantry (пехота)
+	INFANTRY,
+	## Drones
+	DRONE,
+	## Vehicles (колёсная/гусеничная техника)
+	VEHICLE
 }
 
 # ------------------------------------------------------------
-# Armor hit side (стороны попадания)
-# ------------------------------------------------------------
+## Armor hit side (стороны попадания)
 enum HitSide {
 	FRONT,
 	BACK,
@@ -31,20 +33,21 @@ enum HitSide {
 }
 
 # ------------------------------------------------------------
-# Weapon categories (категории оружия)
-# ------------------------------------------------------------
+## Weapon categories (категории оружия)
 enum WeaponCategory {
-	MELEE,        # Melee weapon (нож, дубинка)
-	FIREARM,      # Firearms (пистолет, автомат)
-	THROWN,       # Thrown (гранаты)
-	LASER,
-	PLASMA	
+    ## Melee weapon / рукопашное (нож, дубинка)
+	MELEE,
+	## Firearms / дальнобойное(пистолет, автомат)
+	FIREARM,
+	## Thrown / бросаемое(гранаты)
+	THROWN
 }
 
 # ------------------------------------------------------------
-# Weapon handling (одна/две руки)
-# ------------------------------------------------------------
+## Weapon handling (одна/две руки)
 enum Handling {
-	ONE_HANDED,   # One-handed (одноручное)
-	TWO_HANDED    # Two-handed (двухручное)
+    ## One-handed (одноручное)
+	ONE_HANDED,
+	## Two-handed (двухручное)
+	TWO_HANDED
 }

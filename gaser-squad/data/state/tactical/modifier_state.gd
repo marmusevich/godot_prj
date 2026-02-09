@@ -1,5 +1,4 @@
-extends Object
-class_name ModifierState
+class_name ModifierState extends Object
 
 var definition: ModifierDefinition
 var remaining_time: float = -1.0   # -1 = infinite (бесконечный)

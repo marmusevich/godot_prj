@@ -1,5 +1,4 @@
-extends Object
-class_name BaseState
+class_name BaseState extends Object
 
 var _definition: BaseDefinition # Reference to definition (ссылка на определение)
 

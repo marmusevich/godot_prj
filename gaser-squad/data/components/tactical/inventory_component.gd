@@ -1,5 +1,4 @@
-extends Object
-class_name InventoryComponent
+class_name InventoryComponent extends Object
 
 var inventory: InventoryState
 

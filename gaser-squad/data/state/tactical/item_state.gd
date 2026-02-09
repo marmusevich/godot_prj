@@ -1,5 +1,4 @@
-extends BaseState
-class_name ItemState
+class_name ItemState extends BaseState
 
 var quantity: int = 1
 

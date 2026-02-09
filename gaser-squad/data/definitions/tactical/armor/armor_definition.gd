@@ -1,31 +1,36 @@
-extends BaseDefinition
-class_name ArmorDefinition
+class_name ArmorDefinition extends BaseDefinition
 
-## ============================================================
-## ENUMS
-## ============================================================
+# ============================================================
+# ENUMS
+# ============================================================
 
+## слот брони
 enum ArmorSlot {
-	HEAD,        # Head slot (шлем)
-	BODY,        # Body / torso
-	LEGS,        # Legs
-	FULL_BODY    # Full body (скафандр, экзоскелет)
+	## Head slot (шлем)
+	HEAD,
+	## Body / torso
+	BODY,
+	## Legs
+	LEGS,
+	## Full body (скафандр, экзоскелет)
+	FULL_BODY
 }
 
 
-## ============================================================
-## CLASSIFICATION
-## ============================================================
+# ============================================================
+# CLASSIFICATION
+# ============================================================
 
+## слот брони
 @export var slot: ArmorSlot
+## можно установить на платформы
 @export var allowed_platforms: Array[CommonEnums.Platform]
 
 
-## ============================================================
-## ARMOR PROTECTION
-## ============================================================
-## armor[HitSide][DamageType] = value
-
+# ============================================================
+# ARMOR PROTECTION
+# ============================================================
+## защита по сторонам и типам урона, armor[HitSide][DamageType] = value
 @export var armor := {
 	CommonEnums.HitSide.FRONT: {
 		CommonEnums.DamageType.KINETIC: 0.0,
@@ -49,31 +54,35 @@ enum ArmorSlot {
 	}
 }
 
-@export var ricochet_chance: float = 0.0   # Ricochet chance (вероятность рикошета)
+## Ricochet chance (вероятность рикошета)
+@export var ricochet_chance: float = 0.0
 
-## ============================================================
-## ENVIRONMENTAL
-## ============================================================
+# ============================================================
+# ENVIRONMENTAL
+# ============================================================
 
-@export var sealed: bool = false          # Sealed suit (герметичность)
-@export var radiation_resistance: float = 0.0  # Radiation resist (опц.)
+# Sealed suit (герметичность)
+@export var sealed: bool = false
+# Radiation resist (опц.)
+@export var radiation_resistance: float = 0.0
 
-## ============================================================
-## SUPPORT / AUGMENTATION
-## ============================================================
+# ============================================================
+# SUPPORT / AUGMENTATION
+# ============================================================
 
+## Carry capacity bonus (бонус к грузоподъёмности — экзоскелет)
 @export var carry_capacity_bonus: float = 0.0
-# Carry capacity bonus (бонус к грузоподъёмности — экзоскелет)
 
-## ============================================================
-## DURABILITY
-## ============================================================
+# ============================================================
+# DURABILITY
+# ============================================================
 
-@export var base_durability: float = 1.0  # Base durability (базовая прочность)
+## Base durability (базовая прочность)
+@export var base_durability: float = 1.0  
 
-## ============================================================
-## HELPERS
-## ============================================================
+# ============================================================
+# HELPERS
+# ============================================================
 
 func supports_platform(platform: CommonEnums.Platform) -> bool:
 	return platform in allowed_platforms

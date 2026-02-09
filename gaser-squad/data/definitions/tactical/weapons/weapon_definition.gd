@@ -1,51 +1,60 @@
-extends BaseDefinition
-class_name WeaponDefinition
+class_name WeaponDefinition extends BaseDefinition
 
+# ============================================================
+# CLASSIFICATION
+# ============================================================
 
-## ============================================================
-## CLASSIFICATION
-## ============================================================
+## Weapon category (категория оружия)
+@export var category: int = CommonEnums.WeaponCategory.FIREARM
+## Damage type (тип урона)
+@export var damage_type: int = CommonEnums.DamageType.KINETIC
+## One / two handed (одноручное / двухручное)
+@export var handling: int = CommonEnums.Handling.ONE_HANDED
+## Allowed platforms (куда можно экипировать)
+@export var allowed_platforms: Array[CommonEnums.Platform] = []
 
-@export var category: int = CommonEnums.WeaponCategory.FIREARM  # Weapon category (категория оружия)
-@export var damage_type: int = CommonEnums.DamageType.KINETIC   # Damage type (тип урона)
-@export var handling: int = CommonEnums.Handling.ONE_HANDED     # One / two handed (одноручное / двухручное)
-@export var allowed_platforms: Array[CommonEnums.Platform] = []                  # Allowed platforms (куда можно экипировать)
+# ============================================================
+# BASE COMBAT STATS
+# ============================================================
 
-## ============================================================
-## BASE COMBAT STATS
-## ============================================================
+## Base damage (базовый урон)
+@export var base_damage: float = 0.0
+## Armor penetration (пробитие брони)
+@export var armor_penetration: float = 0.0
+## Effective range (дальность)
+@export var range: float = 0.0
+## Damage radius (радиус урона)
+@export var damage_radius: float = 0.0
+## Bullet spread (разброс)
+@export var spread: float = 0.0
+## Recoil (отдача)
+@export var recoil: float = 0.0
+## Noise level (шум)
+@export var noise: float = 0.0
 
-@export var base_damage: float = 0.0      # Base damage (базовый урон)
-@export var armor_penetration: float = 0.0  # Armor penetration (пробитие брони)
+# ============================================================
+# AMMO & DURABILITY
+# ============================================================
 
-@export var range: float = 0.0           # Effective range (дальность)
-@export var damage_radius: float = 0.0   # Damage radius (радиус урона)
+## Ammo type / caliber (тип боеприпаса)
+@export var ammo_type: String = ""
+## Magazine size (ёмкость магазина)
+@export var magazine_capacity: int = 0
+## Reload time (перезарядка)
+@export var reload_time: float = 0.0
+## Base durability (базовая прочность)
+@export var base_durability: float = 1.0
 
-@export var spread: float = 0.0          # Bullet spread (разброс)
-@export var recoil: float = 0.0          # Recoil (отдача)
-@export var noise: float = 0.0           # Noise level (шум)
+# ============================================================
+# SKILL REQUIREMENTS
+# ============================================================
 
-## ============================================================
-## AMMO & DURABILITY
-## ============================================================
+## требуемые навыки { "rifles": 2, "heavy_weapons": 1 }
+@export var required_skills := {}
 
-# fragment only
-@export var ammo_type: String = ""       # Ammo type / caliber (тип боеприпаса)
-
-@export var magazine_capacity: int = 0   # Magazine size (ёмкость магазина)
-@export var reload_time: float = 0.0     # Reload time (перезарядка)
-
-@export var base_durability: float = 1.0 # Base durability (базовая прочность)
-
-## ============================================================
-## SKILL REQUIREMENTS
-## ============================================================
-
-@export var required_skills := {}        # { "rifles": 2, "heavy_weapons": 1 }
-
-## ============================================================
-## HELPERS
-## ============================================================
+# ============================================================
+# HELPERS
+# ============================================================
 
 func supports_platform(platform: CommonEnums.Platform) -> bool:
 	return platform in allowed_platforms

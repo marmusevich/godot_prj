@@ -1,5 +1,4 @@
-class_name InventoryState
-extends Object
+class_name InventoryState extends Object
 
 var _items: Array = []   # ItemState[]
 var _max_weight: float

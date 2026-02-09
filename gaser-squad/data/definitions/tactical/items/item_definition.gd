@@ -1,6 +1,6 @@
-extends BaseDefinition
-class_name ItemDefinition
+class_name ItemDefinition extends BaseDefinition
 
-@export var stackable: bool = false # Can be stacked (можно складывать)
-
-@export var max_stack: int = 1 # Max stack size (максимальный размер стопки)
+## Can be stacked (можно складывать)
+@export var stackable: bool = false
+## Max stack size (максимальный размер стопки)
+@export var max_stack: int = 1

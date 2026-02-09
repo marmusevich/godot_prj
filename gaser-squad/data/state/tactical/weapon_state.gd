@@ -1,5 +1,4 @@
-extends BaseState
-class_name WeaponState
+class_name WeaponState extends BaseState
 
 ## ============================================================
 ## RUNTIME STATE
