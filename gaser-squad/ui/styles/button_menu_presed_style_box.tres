@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dlj8i5mb7o6nh"]
+
+[ext_resource type="Texture2D" uid="uid://dhv1pi2c2w878" path="res://assets/ui/common/button_default_1.tres" id="1_ob8lm"]
+
+[resource]
+texture = ExtResource("1_ob8lm")
+texture_margin_left = 44.0
+texture_margin_top = 10.0
+texture_margin_right = 44.0
+texture_margin_bottom = 14.0
+modulate_color = Color(0.98, 0.039200023, 0.039200023, 1)

@@ -4,36 +4,15 @@
 [ext_resource type="Texture2D" uid="uid://dal2jr5w2hy7s" path="res://assets/ui/menus/main-menu-fon.tres" id="1_w4exr"]
 [ext_resource type="Texture2D" uid="uid://diihwg8os0qg0" path="res://assets/ui/menus/main-menu-solder.tres" id="2_dl2bw"]
 [ext_resource type="FontFile" uid="uid://b3vwaxu0b641a" path="res://assets/fonts/ZeitmaxItalic-nA2g4.ttf" id="3_3mg83"]
-[ext_resource type="Texture2D" uid="uid://dhv1pi2c2w878" path="res://assets/ui/common/button_default_1.tres" id="4_vb33w"]
+[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://ui/styles/button_menu_normal_style_box.tres" id="5_vb33w"]
+[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://ui/styles/button_menu_presed_style_box.tres" id="6_pwshh"]
+[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://ui/styles/button_menu_hover_style_box.tres" id="7_kr4ra"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwshh"]
 texture = ExtResource("1_w4exr")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kr4ra"]
 texture = ExtResource("2_dl2bw")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ucj7s"]
-texture = ExtResource("4_vb33w")
-texture_margin_left = 44.0
-texture_margin_top = 10.0
-texture_margin_right = 44.0
-texture_margin_bottom = 14.0
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w4exr"]
-texture = ExtResource("4_vb33w")
-texture_margin_left = 44.0
-texture_margin_top = 10.0
-texture_margin_right = 44.0
-texture_margin_bottom = 14.0
-modulate_color = Color(0.98, 0.039200023, 0.039200023, 1)
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dl2bw"]
-texture = ExtResource("4_vb33w")
-texture_margin_left = 44.0
-texture_margin_top = 10.0
-texture_margin_right = 44.0
-texture_margin_bottom = 14.0
-modulate_color = Color(1.0039686, 1.0039686, 0.4318244, 1)
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4exr"]
 
@@ -89,27 +68,27 @@ alignment = 1
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3mg83")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxTexture_ucj7s")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_w4exr")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dl2bw")
+theme_override_styles/normal = ExtResource("5_vb33w")
+theme_override_styles/pressed = ExtResource("6_pwshh")
+theme_override_styles/hover = ExtResource("7_kr4ra")
 text = "Start"
 
 [node name="btnLoad" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=295342720]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3mg83")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxTexture_ucj7s")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_w4exr")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dl2bw")
+theme_override_styles/normal = ExtResource("5_vb33w")
+theme_override_styles/pressed = ExtResource("6_pwshh")
+theme_override_styles/hover = ExtResource("7_kr4ra")
 text = "Load"
 
 [node name="btnOption" type="Button" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1575660318]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3mg83")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxTexture_ucj7s")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_w4exr")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dl2bw")
+theme_override_styles/normal = ExtResource("5_vb33w")
+theme_override_styles/pressed = ExtResource("6_pwshh")
+theme_override_styles/hover = ExtResource("7_kr4ra")
 text = "Option"
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=77745255]
@@ -121,9 +100,9 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_w4exr")
 layout_mode = 2
 theme_override_fonts/font = ExtResource("3_3mg83")
 theme_override_font_sizes/font_size = 36
-theme_override_styles/normal = SubResource("StyleBoxTexture_ucj7s")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_w4exr")
-theme_override_styles/hover = SubResource("StyleBoxTexture_dl2bw")
+theme_override_styles/normal = ExtResource("5_vb33w")
+theme_override_styles/pressed = ExtResource("6_pwshh")
+theme_override_styles/hover = ExtResource("7_kr4ra")
 text = "Exit"
 
 [connection signal="pressed" from="MarginContainer/HBoxContainer/VBoxContainer/btnStart" to="." method="_on_btn_start_pressed"]

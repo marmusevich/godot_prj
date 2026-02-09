@@ -1,0 +1,11 @@
+[gd_resource type="StyleBoxTexture" format=3 uid="uid://dv2u3occ02qk8"]
+
+[ext_resource type="Texture2D" uid="uid://6ojrmjtxm658" path="res://assets/ui/common/kenney_ui-pack-space-expansion/metalPanel.tres" id="1_er5p1"]
+
+[resource]
+texture = ExtResource("1_er5p1")
+texture_margin_left = 15.0
+texture_margin_top = 15.0
+texture_margin_right = 15.0
+texture_margin_bottom = 15.0
+modulate_color = Color(0.5132329, 0.5132329, 0.5132329, 1)

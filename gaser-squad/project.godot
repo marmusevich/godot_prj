@@ -18,6 +18,7 @@ config/name="GaserSquad"
 run/main_scene="uid://k7di4fqjn6c6"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
+config/tags=PackedStringArray("my")
 
 [input]
 
