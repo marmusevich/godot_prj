@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://dal2jr5w2hy7s" path="res://assets/ui/menus/main-menu-fon.tres" id="1_w4exr"]
 [ext_resource type="Texture2D" uid="uid://diihwg8os0qg0" path="res://assets/ui/menus/main-menu-solder.tres" id="2_dl2bw"]
 [ext_resource type="FontFile" uid="uid://b3vwaxu0b641a" path="res://assets/fonts/ZeitmaxItalic-nA2g4.ttf" id="3_3mg83"]
-[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://ui/styles/button_menu_normal_style_box.tres" id="5_vb33w"]
-[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://ui/styles/button_menu_presed_style_box.tres" id="6_pwshh"]
-[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://ui/styles/button_menu_hover_style_box.tres" id="7_kr4ra"]
+[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://modes/common/ui/styles/button_menu_normal_style_box.tres" id="5_vb33w"]
+[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://modes/common/ui/styles/button_menu_presed_style_box.tres" id="6_pwshh"]
+[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://modes/common/ui/styles/button_menu_hover_style_box.tres" id="7_kr4ra"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pwshh"]
 texture = ExtResource("1_w4exr")

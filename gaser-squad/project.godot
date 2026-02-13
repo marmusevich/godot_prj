@@ -14,11 +14,16 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 
 [application]
 
-config/name="GaserSquad"
+config/name="Gaser Squad (ГЛАЗЕР-ный отряд)"
+config/description="Liser Squad, UFO, космические ренджеры - смешать!
+Летаем на по шаговой карте по галактике, стреляем, строим / развиваем корабль, находим / иследуем науку
+торгуем с планетами
+одна из мисий пошаговый бой"
+config/version="0 - в разработке"
+config/tags=PackedStringArray("my", "my_tbs", "studies_project")
 run/main_scene="uid://k7di4fqjn6c6"
 config/features=PackedStringArray("4.6", "Forward Plus")
-config/icon="res://icon.svg"
-config/tags=PackedStringArray("my")
+config/icon="uid://b5imbho2vgmwr"
 
 [input]
 
