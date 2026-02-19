@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://dtag2hjbhq5uv"]
+
+[ext_resource type="FontFile" uid="uid://b3vwaxu0b641a" path="res://assets/fonts/ZeitmaxItalic-nA2g4.ttf" id="1_p1bvp"]
+[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://modes/common/ui/styles/button_menu_normal_style_box.tres" id="2_hnvc2"]
+[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://modes/common/ui/styles/button_menu_presed_style_box.tres" id="3_idlui"]
+[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://modes/common/ui/styles/button_menu_hover_style_box.tres" id="4_b3faa"]
+[ext_resource type="Script" uid="uid://p75cgoufk47m" path="res://modes/common/ui/primary_buton.gd" id="5_abus6"]
+[ext_resource type="AudioStream" uid="uid://6xih0de06q0d" path="res://assets/audio/button_press.wav" id="6_hnvc2"]
+
+[node name="PrimaryButton" type="Button" unique_id=439914430]
+custom_minimum_size = Vector2(300, 70)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+theme_override_fonts/font = ExtResource("1_p1bvp")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = ExtResource("2_hnvc2")
+theme_override_styles/pressed = ExtResource("3_idlui")
+theme_override_styles/hover = ExtResource("4_b3faa")
+text = "default"
+script = ExtResource("5_abus6")
+click_sound = ExtResource("6_hnvc2")
