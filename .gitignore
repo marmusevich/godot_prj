@@ -14,3 +14,15 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 .vscode
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+tmp/
+temp/
