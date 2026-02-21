@@ -3,9 +3,7 @@
 [ext_resource type="Script" uid="uid://bmef2x836aygr" path="res://modes/common/ui/options_menu.gd" id="1_s88ok"]
 [ext_resource type="FontFile" uid="uid://b3vwaxu0b641a" path="res://assets/fonts/ZeitmaxItalic-nA2g4.ttf" id="2_3rvs4"]
 [ext_resource type="StyleBox" uid="uid://dv2u3occ02qk8" path="res://modes/common/ui/styles/metal_panel_style_box.tres" id="3_3n08d"]
-[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://modes/common/ui/styles/button_menu_normal_style_box.tres" id="4_qmgas"]
-[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://modes/common/ui/styles/button_menu_presed_style_box.tres" id="5_oal84"]
-[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://modes/common/ui/styles/button_menu_hover_style_box.tres" id="6_mr6cv"]
+[ext_resource type="PackedScene" uid="uid://dtag2hjbhq5uv" path="res://modes/common/ui/primary_buton.tscn" id="4_hxukf"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3n08d"]
 
@@ -91,14 +89,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_styles/separator = SubResource("StyleBoxEmpty_3n08d")
 
-[node name="btnBack" type="Button" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=1007435389]
+[node name="btnBack" parent="CenterContainer/VBoxContainer/HBoxContainer" unique_id=439914430 instance=ExtResource("4_hxukf")]
 layout_mode = 2
-size_flags_horizontal = 8
-theme_override_fonts/font = ExtResource("2_3rvs4")
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = ExtResource("4_qmgas")
-theme_override_styles/pressed = ExtResource("5_oal84")
-theme_override_styles/hover = ExtResource("6_mr6cv")
 text = "Back"
+button_id = &"back"
 
-[connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/btnBack" to="." method="_on_button_pressed"]
+[connection signal="activated" from="CenterContainer/VBoxContainer/HBoxContainer/btnBack" to="." method="_on_primary_button_activated"]

@@ -12,17 +12,18 @@ func _ready() -> void:
 	options_menu.visible = false
 
 
-
-func _on_btn_start_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_btn_load_pressed() -> void:
-	pass # Replace with function body.
-
-
-func _on_btn_option_pressed() -> void:
-	submenu_manager.push(options_menu)
-
-func _on_btn_exit_pressed() -> void:
-	pass # Replace with function body.
+func _on_primary_button_activated(id: StringName) -> void:
+	print("main menu::_on_primary_button_activated ID = ", id)
+	match id:
+		"start":
+			pass
+		"load":
+			pass
+		"option":
+			submenu_manager.push(options_menu)
+		"quit":
+			pass
+			
+		_:
+			# Знак подчеркивания работает как "default"
+			push_warning("Неизвестный ID кнопки: ", id)
