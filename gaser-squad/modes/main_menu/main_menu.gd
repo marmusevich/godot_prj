@@ -19,13 +19,13 @@ func _on_all_menus_closed():
 func _on_primary_button_activated(id: UIIds.ButtonId) -> void:
 	match id:
 		UIIds.ButtonId.MAIN_PLAY:
-			pass
+			SceneManager.change_scene(SceneManager.start_gama_scene)
 		UIIds.ButtonId.MAIN_LOAD:
 			pass
 		UIIds.ButtonId.MAIN_OPTIONS:
 			submenu_manager.push(options_menu)
 		UIIds.ButtonId.MAIN_EXIT:
-			pass
+			SceneManager.quit_game()
 		_:
 			push_warning("main menu::_on_primary_button_activated: wrong ID - ", id)
 	

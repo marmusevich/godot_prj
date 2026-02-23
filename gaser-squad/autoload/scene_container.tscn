@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cn3yfkkqqwad1"]
+
+[ext_resource type="Script" uid="uid://q3m4nrn4nx0n" path="res://autoload/scene_container.gd" id="1_erpnn"]
+
+[node name="SceneContainer" type="Node" unique_id=849766810]
+script = ExtResource("1_erpnn")

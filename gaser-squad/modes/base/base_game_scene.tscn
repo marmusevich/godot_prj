@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://divejaiwomj8b"]
+
+[ext_resource type="Script" uid="uid://bju13ebi6pb6y" path="res://modes/base/base_game_scene.gd" id="1_tfd56"]
+
+[node name="BaseGameScene" type="Node" unique_id=437806331]
+script = ExtResource("1_tfd56")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1810440179]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=769214849]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -120.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "label from base"

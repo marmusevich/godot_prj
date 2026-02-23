@@ -21,9 +21,13 @@ config/description="Liser Squad, UFO, космические ренджеры - 
 одна из мисий пошаговый бой"
 config/version="0 - в разработке"
 config/tags=PackedStringArray("my", "my_tbs", "studies_project")
-run/main_scene="uid://k7di4fqjn6c6"
+run/main_scene="uid://cn3yfkkqqwad1"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="uid://b5imbho2vgmwr"
+
+[autoload]
+
+SceneManager="*uid://tngvtinbnhhq"
 
 [input]
 
