@@ -1,5 +1,4 @@
-class_name SubMenuManager
-extends CanvasLayer
+class_name SubMenuManager extends CanvasLayer
 
 
 signal stack_empty

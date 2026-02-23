@@ -1,5 +1,4 @@
-class_name BaseScene
-extends Node
+class_name BaseScene extends Node
 
 
 var submenu_manager: SubMenuManager
@@ -7,6 +6,8 @@ var submenu_manager: SubMenuManager
 func _ready():
 	_create_submenu_manager()
 	_connect_signals()
+	
+	
 
 func _create_submenu_manager():
 	submenu_manager = SubMenuManager.new()

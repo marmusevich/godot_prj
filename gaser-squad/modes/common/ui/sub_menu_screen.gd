@@ -1,5 +1,4 @@
-class_name SubMenuScreen
-extends Control
+class_name SubMenuScreen extends Control
 
 
 @export var manager: SubMenuManager

@@ -68,18 +68,17 @@ alignment = 1
 [node name="btnStart" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=439914430 instance=ExtResource("8_pwshh")]
 layout_mode = 2
 text = "Start"
-button_id = &"start"
+button_id = 1
 
 [node name="btnLoad" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1276683025 instance=ExtResource("8_pwshh")]
 layout_mode = 2
 text = "Load"
-button_id = &"load"
+button_id = 2
 
 [node name="btnOption" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=1641329080 instance=ExtResource("8_pwshh")]
 layout_mode = 2
-text = "Option
-"
-button_id = &"option"
+text = "Option"
+button_id = 3
 
 [node name="HSeparator" type="HSeparator" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=77745255]
 layout_mode = 2
@@ -89,7 +88,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_w4exr")
 [node name="btnExit" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=677377042 instance=ExtResource("8_pwshh")]
 layout_mode = 2
 text = "Exit"
-button_id = &"exit"
+button_id = 4
 
 [connection signal="activated" from="MarginContainer/HBoxContainer/VBoxContainer/btnStart" to="." method="_on_primary_button_activated"]
 [connection signal="activated" from="MarginContainer/HBoxContainer/VBoxContainer/btnLoad" to="." method="_on_primary_button_activated"]

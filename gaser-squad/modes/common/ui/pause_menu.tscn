@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cj30mocoble3i"]
 
+[ext_resource type="Script" uid="uid://c4jsk5ayc5lj1" path="res://modes/common/ui/pause_menu.gd" id="1_bai1s"]
+
 [node name="PauseMenu" type="Control" unique_id=1141919041]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,4 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_bai1s")
