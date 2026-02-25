@@ -1,6 +1,10 @@
 extends BaseScene
 
-@onready var options_menu := preload("res://modes/common/ui/options_menu.tscn").instantiate()
+#@onready var options_menu := preload("res://presentation/common/ui/options_menu.tscn").instantiate()
+
+@export var options_menu_scene: PackedScene # = preload("res://presentation/common/ui/options_menu.tscn")
+@onready var options_menu := options_menu_scene.instantiate()
+
 
 func _ready() -> void:
 	super._ready()

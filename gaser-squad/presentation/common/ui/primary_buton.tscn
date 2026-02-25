@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dtag2hjbhq5uv"]
 
 [ext_resource type="FontFile" uid="uid://b3vwaxu0b641a" path="res://assets/fonts/ZeitmaxItalic-nA2g4.ttf" id="1_p1bvp"]
-[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://modes/common/ui/styles/button_menu_normal_style_box.tres" id="2_hnvc2"]
-[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://modes/common/ui/styles/button_menu_presed_style_box.tres" id="3_idlui"]
-[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://modes/common/ui/styles/button_menu_hover_style_box.tres" id="4_b3faa"]
-[ext_resource type="Script" uid="uid://p75cgoufk47m" path="res://modes/common/ui/primary_buton.gd" id="5_abus6"]
+[ext_resource type="StyleBox" uid="uid://djovw4ruq0k3y" path="res://presentation/common/ui/styles/button_menu_normal_style_box.tres" id="2_hnvc2"]
+[ext_resource type="StyleBox" uid="uid://dlj8i5mb7o6nh" path="res://presentation/common/ui/styles/button_menu_presed_style_box.tres" id="3_idlui"]
+[ext_resource type="StyleBox" uid="uid://3orv70evk4gv" path="res://presentation/common/ui/styles/button_menu_hover_style_box.tres" id="4_b3faa"]
+[ext_resource type="Script" uid="uid://p75cgoufk47m" path="res://presentation/common/ui/primary_buton.gd" id="5_abus6"]
 [ext_resource type="AudioStream" uid="uid://6xih0de06q0d" path="res://assets/audio/button_press.wav" id="6_hnvc2"]
 
 [node name="PrimaryButton" type="Button" unique_id=439914430]

@@ -13,8 +13,8 @@ var start_gama_scene: StringName = TACTICAL_MAIN
 
 # ==============================
 var _scenes: Dictionary[StringName, String] = {
-	MAIN_MENU: "res://modes/main_menu/main_menu.tscn",
-	TACTICAL_MAIN: "res://modes/tactical/tactical_main.tscn",
+	MAIN_MENU: "res://presentation/main_menu/main_menu.tscn",
+	TACTICAL_MAIN: "res://presentation/tactical/tactical_main.tscn",
 }
 
 const DEFAULT_DURATION: float = 0.1

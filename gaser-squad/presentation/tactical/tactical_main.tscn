@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dgiuabweagbfm"]
 
-[ext_resource type="PackedScene" uid="uid://divejaiwomj8b" path="res://modes/common/base_game_scene.tscn" id="1_7cour"]
+[ext_resource type="PackedScene" uid="uid://divejaiwomj8b" path="res://presentation/common/base_game_scene.tscn" id="1_7cour"]
 
 [node name="BaseGameScene" unique_id=437806331 instance=ExtResource("1_7cour")]
 
