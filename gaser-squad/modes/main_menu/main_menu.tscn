@@ -13,6 +13,12 @@ texture = ExtResource("2_dl2bw")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w4exr"]
 
+[sub_resource type="InputEventKey" id="InputEventKey_w4exr"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_dl2bw"]
+events = [SubResource("InputEventKey_w4exr")]
+
 [node name="MainMenu" type="Control" unique_id=948280355]
 layout_mode = 3
 anchors_preset = 15
@@ -87,6 +93,7 @@ theme_override_styles/separator = SubResource("StyleBoxEmpty_w4exr")
 
 [node name="btnExit" parent="MarginContainer/HBoxContainer/VBoxContainer" unique_id=677377042 instance=ExtResource("8_pwshh")]
 layout_mode = 2
+shortcut = SubResource("Shortcut_dl2bw")
 text = "Exit"
 button_id = 4
 

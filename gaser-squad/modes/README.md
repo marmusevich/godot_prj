@@ -1,3 +1,2 @@
-# modes
-
-Game modes (each mode has scenes + controllers)
+Game modes 
+only view of game - no logic, no states

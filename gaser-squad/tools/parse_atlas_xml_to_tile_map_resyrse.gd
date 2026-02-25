@@ -1,6 +1,12 @@
 @tool
 extends EditorScript
 
+# repack keney UI pack to resurse files
+#
+#
+
+
+
 @export_file("*.xml") var xml_path : String =   "res://assets/ui/common/kenney_ui-pack-space-expansion/uipackSpace_sheet.xml"
 @export_file("*.png") var atlas_path : String = "res://assets/ui/common/kenney_ui-pack-space-expansion/uipackSpace_sheet.png"
 @export_dir var output_dir : String =           "res://assets/ui/common/kenney_ui-pack-space-expansion"

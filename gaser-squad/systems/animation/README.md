@@ -1,3 +1,0 @@
-# systems\animation
-
-Animation helpers

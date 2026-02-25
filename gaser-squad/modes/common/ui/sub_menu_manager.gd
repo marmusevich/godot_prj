@@ -84,7 +84,9 @@ func has_menu() -> bool:
 	return not _stack.is_empty()
 
 func current() -> Control:
-	return _stack.is_empty() if null else _stack[-1] as Control 
+	if _stack.is_empty():
+		return null
+	return _stack[-1] as Control	
 
 func push(menu: Control):
 	if _animating:

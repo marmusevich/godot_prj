@@ -1,3 +1,0 @@
-# systems\camera
-
-Camera controllers

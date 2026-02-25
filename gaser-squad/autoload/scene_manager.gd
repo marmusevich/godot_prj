@@ -12,16 +12,15 @@ var start_gama_scene: StringName = TACTICAL_MAIN
 
 
 # ==============================
-# Словарь сцен
-# ==============================
-
 var _scenes: Dictionary[StringName, String] = {
 	MAIN_MENU: "res://modes/main_menu/main_menu.tscn",
 	TACTICAL_MAIN: "res://modes/tactical/tactical_main.tscn",
-	
 }
 
-# 
+const DEFAULT_DURATION: float = 0.1
+
+
+# ---------------------
 var _current_scene: Node = null
 var _root: Node
 var _fade_layer: CanvasLayer
@@ -29,9 +28,6 @@ var _fade_rect: ColorRect
 var _fade_tween: Tween
 
 
-
-# ==============================
-# Публичный API
 # ==============================
 
 func change_scene(scene_id: StringName) -> void:
@@ -62,15 +58,12 @@ func register_root(node: Node) -> void:
 	_root = node
 	_create_fade_layer()
 
-
-
 # ==============================
-
 
 func _create_fade_layer() -> void:
 	# CanvasLayer
 	_fade_layer = CanvasLayer.new()
-	_fade_layer.layer = 100   # гарантированно поверх
+	_fade_layer.layer = 100   # upper all
 	_root.add_child(_fade_layer)
 	
 	# ColorRect
@@ -92,7 +85,7 @@ func _kill_fade_tween():
 	
 
 
-func _fade_out(duration: float = 0.4) -> void:
+func _fade_out(duration: float = DEFAULT_DURATION) -> void:
 	_kill_fade_tween()
 
 	_fade_tween = create_tween()
@@ -110,7 +103,7 @@ func _fade_out(duration: float = 0.4) -> void:
 	
 
 
-func _fade_in(duration: float = 0.4) -> void:
+func _fade_in(duration: float = DEFAULT_DURATION) -> void:
 	_kill_fade_tween()
 
 	_fade_tween = create_tween()
@@ -133,6 +126,12 @@ func _show_loading_screen():
 func _hide_loading_screen():
 	print("Hide loading screen...")
 
+
+
+
+
+# copy paste, see: base_game_scene.gd
+#TODO provide custom confirm dialog
 func _show_quit_confirmation():
 	var dialog := ConfirmationDialog.new()
 	dialog.title = "Exit"
