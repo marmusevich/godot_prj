@@ -17,7 +17,7 @@
 
 ---
 
-# Into Our Ship (Base) {#ship-base}
+# Into Our Ship (Base) (#ship-base)
 [ru] 
 Режим управления базовым (материнским) кораблём.
 
