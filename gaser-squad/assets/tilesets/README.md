@@ -1,3 +1,0 @@
-# assets\tilesets
-
-Godot TileSets
