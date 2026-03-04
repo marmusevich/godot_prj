@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cib5yen4yy2ql"
-path="res://.godot/imported/tiles_test.png-6744d8ce51377bfd31b907da1eb20d01.ctex"
+uid="uid://retuv4277qkm"
+path="res://.godot/imported/food.png-e722e90a5be5d38f4a5aac17119739b9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/tilesets/tactical/tiles_test.png"
-dest_files=["res://.godot/imported/tiles_test.png-6744d8ce51377bfd31b907da1eb20d01.ctex"]
+source_file="res://assets/sprites/items/tactical/food.png"
+dest_files=["res://.godot/imported/food.png-e722e90a5be5d38f4a5aac17119739b9.ctex"]
 
 [params]
 
