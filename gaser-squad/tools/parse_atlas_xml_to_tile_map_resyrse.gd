@@ -29,6 +29,8 @@ func _run():
 			var y := int(xml.get_named_attribute_value("y"))
 			var w := int(xml.get_named_attribute_value("width"))
 			var h := int(xml.get_named_attribute_value("height"))
+			
+			name = name.to_lower()
 
 			var at := AtlasTexture.new()
 			at.atlas = atlas
