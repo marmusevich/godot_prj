@@ -1,0 +1,151 @@
+[gd_resource type="Resource" script_class="TacticalTileDatabase" format=3 uid="uid://cuxxp4yymq6ii"]
+
+[ext_resource type="Script" uid="uid://bfbm8t6yidtls" path="res://data/tactical/tile_database.gd" id="1_2bsdm"]
+[ext_resource type="Script" uid="uid://ytawer1dsgif" path="res://data/tactical/tile_definition.gd" id="2_c65rf"]
+
+[sub_resource type="Resource" id="Resource_qa4yd"]
+script = ExtResource("2_c65rf")
+id = &"rb cobble"
+name = "булыжник, стена"
+walkable = false
+move_cost = -1
+blocks_vision = true
+opacity = -1
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_unc81"]
+script = ExtResource("2_c65rf")
+id = &"sand full"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_1uqqg"]
+script = ExtResource("2_c65rf")
+id = &"plant 1"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_7njpp"]
+script = ExtResource("2_c65rf")
+id = &"oulc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_boyro"]
+script = ExtResource("2_c65rf")
+id = &"lb tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_of0px"]
+script = ExtResource("2_c65rf")
+id = &"oblc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_mrjxg"]
+script = ExtResource("2_c65rf")
+id = &"ub tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_y00y8"]
+script = ExtResource("2_c65rf")
+id = &"tile full"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_ktita"]
+script = ExtResource("2_c65rf")
+id = &"bb tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_8tlmy"]
+script = ExtResource("2_c65rf")
+id = &"ourc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_ypxf2"]
+script = ExtResource("2_c65rf")
+id = &"rb tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_syvb8"]
+script = ExtResource("2_c65rf")
+id = &"iblc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_1waic"]
+script = ExtResource("2_c65rf")
+id = &"iulc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_k1xu7"]
+script = ExtResource("2_c65rf")
+id = &"obrc tile"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_wqi2x"]
+script = ExtResource("2_c65rf")
+id = &"plant 3"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_wovjt"]
+script = ExtResource("2_c65rf")
+id = &"oulc gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_vmk5s"]
+script = ExtResource("2_c65rf")
+id = &"lb gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_er3ni"]
+script = ExtResource("2_c65rf")
+id = &"oblc gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_ndgf5"]
+script = ExtResource("2_c65rf")
+id = &"iulc cobble"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_3ysnv"]
+script = ExtResource("2_c65rf")
+id = &"bb cobble"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_hnb0k"]
+script = ExtResource("2_c65rf")
+id = &"ub gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_jkira"]
+script = ExtResource("2_c65rf")
+id = &"gravel full"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_evl3p"]
+script = ExtResource("2_c65rf")
+id = &"bb gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_sgafa"]
+script = ExtResource("2_c65rf")
+id = &"ourc gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_2h4f5"]
+script = ExtResource("2_c65rf")
+id = &"rb gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_0dtwn"]
+script = ExtResource("2_c65rf")
+id = &"obrc gravel"
+name = "NEED EDIT"
+
+[sub_resource type="Resource" id="Resource_asayf"]
+script = ExtResource("2_c65rf")
+id = &"iurc cobble"
+name = "NEED EDIT"
+
+[resource]
+script = ExtResource("1_2bsdm")
+tiles = Array[ExtResource("2_c65rf")]([SubResource("Resource_qa4yd"), SubResource("Resource_unc81"), SubResource("Resource_1uqqg"), SubResource("Resource_7njpp"), SubResource("Resource_boyro"), SubResource("Resource_of0px"), SubResource("Resource_mrjxg"), SubResource("Resource_y00y8"), SubResource("Resource_ktita"), SubResource("Resource_8tlmy"), SubResource("Resource_ypxf2"), SubResource("Resource_syvb8"), SubResource("Resource_1waic"), SubResource("Resource_k1xu7"), SubResource("Resource_wqi2x"), SubResource("Resource_wovjt"), SubResource("Resource_vmk5s"), SubResource("Resource_er3ni"), SubResource("Resource_ndgf5"), SubResource("Resource_3ysnv"), SubResource("Resource_hnb0k"), SubResource("Resource_jkira"), SubResource("Resource_evl3p"), SubResource("Resource_sgafa"), SubResource("Resource_2h4f5"), SubResource("Resource_0dtwn"), SubResource("Resource_asayf")])

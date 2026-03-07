@@ -7,6 +7,7 @@ enum LayerType
 
 ## 
 @export var layer_type: LayerType = LayerType.TERRAIN
+@export var name: StringName
 
 @export var tile_set : TileSet
 
