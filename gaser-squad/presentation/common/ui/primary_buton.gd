@@ -1,9 +1,9 @@
 class_name PrimaryButton extends Button
 
-signal activated(id: UIIds.ButtonId)
+signal activated(id: UiIDs.ButtonId)
 
 
-@export var button_id : UIIds.ButtonId = UIIds.ButtonId.UNKNOWN
+@export var button_id : UiIDs.ButtonId = UiIDs.ButtonId.UNKNOWN
 @export var ease_type : Tween.EaseType
 @export var transition_type : Tween.TransitionType
 @export var anim_durftion : float = 0.1

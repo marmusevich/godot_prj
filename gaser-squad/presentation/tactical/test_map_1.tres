@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TacticalMapDefinition" format=3 uid="uid://sj2lgdetdhbh"]
+
+[ext_resource type="Script" uid="uid://d1581g8hvu1i6" path="res://data/tactical/map_definition.gd" id="1_l1xs0"]
+[ext_resource type="Script" uid="uid://brqvnew0mx4kb" path="res://data/tactical/layer_definition.gd" id="2_0isdo"]
+
+[resource]
+script = ExtResource("1_l1xs0")
+metadata/_custom_type_script = "uid://d1581g8hvu1i6"

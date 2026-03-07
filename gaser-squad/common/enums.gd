@@ -35,7 +35,7 @@ enum HitSide {
 # ------------------------------------------------------------
 ## Weapon categories (категории оружия)
 enum WeaponCategory {
-    ## Melee weapon / рукопашное (нож, дубинка)
+	## Melee weapon / рукопашное (нож, дубинка)
 	MELEE,
 	## Firearms / дальнобойное(пистолет, автомат)
 	FIREARM,
@@ -46,7 +46,7 @@ enum WeaponCategory {
 # ------------------------------------------------------------
 ## Weapon handling (одна/две руки)
 enum Handling {
-    ## One-handed (одноручное)
+	## One-handed (одноручное)
 	ONE_HANDED,
 	## Two-handed (двухручное)
 	TWO_HANDED

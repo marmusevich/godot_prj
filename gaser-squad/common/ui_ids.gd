@@ -1,4 +1,4 @@
-class_name UIIds extends Node
+class_name UiIDs extends Node
 
 enum ButtonId {
 	UNKNOWN = -1,
