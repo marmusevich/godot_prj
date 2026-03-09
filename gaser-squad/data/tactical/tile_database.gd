@@ -1,18 +1,20 @@
+@tool
 class_name TacticalTileDatabase extends Resource
 
-@export var tiles : Array[TacticalTileDefinition]
+@export var tiles : Array[TacticalTileDefinition] 	
 
 var _map : Dictionary[StringName, TacticalTileDefinition] = {}
 
 func _init():
 	_rebuild()
 
+
 func _rebuild():
 	_map.clear()
 
 	for t in tiles:
 		if _map.has(t.id):
-			push_error("Duplicate tile id: %d" % t.id)
+			push_error("Duplicate tile id: %s" % t.id)
 		
 		_map[t.id] = t
 

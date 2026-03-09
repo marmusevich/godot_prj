@@ -45,3 +45,4 @@ sand	- песок
 3. gravel	- гравий
 
 
+разрушаются: tile --> cobble --> gravel --> ground(base)

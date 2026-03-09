@@ -1,0 +1,515 @@
+[gd_resource type="Resource" script_class="TacticalTileDatabase" format=3 uid="uid://cunfurbgg8gx3"]
+
+[ext_resource type="Script" uid="uid://bfbm8t6yidtls" path="res://data/tactical/tile_database.gd" id="1_d2rso"]
+[ext_resource type="Script" uid="uid://ytawer1dsgif" path="res://data/tactical/tile_definition.gd" id="2_w3bvb"]
+
+[sub_resource type="Resource" id="Resource_d6gw7"]
+script = ExtResource("2_w3bvb")
+id = &"bush 1"
+display_name = "кустик"
+move_cost = 6
+opacity = 5
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 5
+flammable = true
+burning_time = 2
+
+[sub_resource type="Resource" id="Resource_2kdmt"]
+script = ExtResource("2_w3bvb")
+id = &"bush 2"
+display_name = "кустик"
+move_cost = 6
+opacity = 5
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 6
+flammable = true
+burning_time = 3
+
+[sub_resource type="Resource" id="Resource_xsf32"]
+script = ExtResource("2_w3bvb")
+id = &"cactus"
+display_name = "Кактус"
+walkable = false
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 2
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_t3sgi"]
+script = ExtResource("2_w3bvb")
+id = &"cobble bb"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel bb"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_o4ay7"]
+script = ExtResource("2_w3bvb")
+id = &"cobble full"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel full"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_eal6l"]
+script = ExtResource("2_w3bvb")
+id = &"cobble iblc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel iblc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_ye0dn"]
+script = ExtResource("2_w3bvb")
+id = &"cobble ibrc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel ibrc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_pad68"]
+script = ExtResource("2_w3bvb")
+id = &"cobble iulc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel iulc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_pnos4"]
+script = ExtResource("2_w3bvb")
+id = &"cobble iurc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel iurc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_jad8y"]
+script = ExtResource("2_w3bvb")
+id = &"cobble lb"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel lb"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_ybf3a"]
+script = ExtResource("2_w3bvb")
+id = &"cobble oblc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel oblc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_25xkc"]
+script = ExtResource("2_w3bvb")
+id = &"cobble obrc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel obrc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_jmcs5"]
+script = ExtResource("2_w3bvb")
+id = &"cobble oulc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel oulc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_1bnud"]
+script = ExtResource("2_w3bvb")
+id = &"cobble ourc"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel ourc"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_fv1ho"]
+script = ExtResource("2_w3bvb")
+id = &"cobble rb"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel rb"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_wmvw2"]
+script = ExtResource("2_w3bvb")
+id = &"cobble ub"
+display_name = "булыжники, остатки стены"
+move_cost = 4
+cover_type = 1
+destructible = true
+destroyed_to = &"gravel ub"
+damage_to_destroy = 20
+
+[sub_resource type="Resource" id="Resource_r4o01"]
+script = ExtResource("2_w3bvb")
+id = &"gravel bb"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_2esct"]
+script = ExtResource("2_w3bvb")
+id = &"gravel full"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_wen84"]
+script = ExtResource("2_w3bvb")
+id = &"gravel iblc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_13eel"]
+script = ExtResource("2_w3bvb")
+id = &"gravel ibrc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_hawg4"]
+script = ExtResource("2_w3bvb")
+id = &"gravel iulc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_jutus"]
+script = ExtResource("2_w3bvb")
+id = &"gravel iurc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_vc1bd"]
+script = ExtResource("2_w3bvb")
+id = &"gravel lb"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_sgvfy"]
+script = ExtResource("2_w3bvb")
+id = &"gravel oblc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_5ojl4"]
+script = ExtResource("2_w3bvb")
+id = &"gravel obrc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_hmjm7"]
+script = ExtResource("2_w3bvb")
+id = &"gravel oulc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_srsp6"]
+script = ExtResource("2_w3bvb")
+id = &"gravel ourc"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_gvjix"]
+script = ExtResource("2_w3bvb")
+id = &"gravel rb"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_6vxga"]
+script = ExtResource("2_w3bvb")
+id = &"gravel ub"
+display_name = "мелкий гравий"
+move_cost = 2
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 10
+
+[sub_resource type="Resource" id="Resource_xyr2o"]
+script = ExtResource("2_w3bvb")
+id = &"ground"
+display_name = "твердый утоптаный грунт"
+
+[sub_resource type="Resource" id="Resource_vmpi6"]
+script = ExtResource("2_w3bvb")
+id = &"plant 1"
+display_name = "растение"
+walkable = false
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 5
+flammable = true
+burning_time = 6
+
+[sub_resource type="Resource" id="Resource_q2qxu"]
+script = ExtResource("2_w3bvb")
+id = &"plant 2"
+display_name = "растение"
+walkable = false
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 5
+flammable = true
+burning_time = 6
+
+[sub_resource type="Resource" id="Resource_3pa64"]
+script = ExtResource("2_w3bvb")
+id = &"plant 3"
+display_name = "растение"
+walkable = false
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 5
+flammable = true
+burning_time = 6
+
+[sub_resource type="Resource" id="Resource_y6ine"]
+script = ExtResource("2_w3bvb")
+id = &"rook"
+display_name = "Каменюка"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 1
+destroyed_to = &"gravel full"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_pyidv"]
+script = ExtResource("2_w3bvb")
+id = &"sign"
+display_name = "Знак с нерасборчивой надписью"
+walkable = false
+destructible = true
+destroyed_to = &"ground"
+damage_to_destroy = 1
+flammable = true
+burning_time = 2
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_ltduf"]
+script = ExtResource("2_w3bvb")
+id = &"tile bb"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble bb"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_cc0f0"]
+script = ExtResource("2_w3bvb")
+id = &"tile full"
+display_name = "поверхность из кладки"
+destructible = true
+destroyed_to = &"cobble full"
+damage_to_destroy = 30
+
+[sub_resource type="Resource" id="Resource_bb2jn"]
+script = ExtResource("2_w3bvb")
+id = &"tile iblc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble iblc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_7uf8x"]
+script = ExtResource("2_w3bvb")
+id = &"tile ibrc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble ibrc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_n2qci"]
+script = ExtResource("2_w3bvb")
+id = &"tile iulc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble iulc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_cp0cq"]
+script = ExtResource("2_w3bvb")
+id = &"tile iurc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble iurc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_egrpi"]
+script = ExtResource("2_w3bvb")
+id = &"tile lb"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble lb"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_78boa"]
+script = ExtResource("2_w3bvb")
+id = &"tile oblc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble oblc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_y82qr"]
+script = ExtResource("2_w3bvb")
+id = &"tile obrc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble obrc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_3k60h"]
+script = ExtResource("2_w3bvb")
+id = &"tile oulc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble oulc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_dj8ut"]
+script = ExtResource("2_w3bvb")
+id = &"tile ourc"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble ourc"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_hgfhx"]
+script = ExtResource("2_w3bvb")
+id = &"tile rb"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble rb"
+damage_to_destroy = 30
+allows_items = false
+
+[sub_resource type="Resource" id="Resource_pgr6r"]
+script = ExtResource("2_w3bvb")
+id = &"tile ub"
+display_name = "на вид крепкая стена"
+walkable = false
+blocks_vision = true
+blocks_projectiles = true
+cover_type = 2
+destructible = true
+destroyed_to = &"cobble ub"
+damage_to_destroy = 30
+allows_items = false
+
+[resource]
+script = ExtResource("1_d2rso")
+tiles = Array[ExtResource("2_w3bvb")]([SubResource("Resource_d6gw7"), SubResource("Resource_2kdmt"), SubResource("Resource_xsf32"), SubResource("Resource_t3sgi"), SubResource("Resource_o4ay7"), SubResource("Resource_eal6l"), SubResource("Resource_ye0dn"), SubResource("Resource_pad68"), SubResource("Resource_pnos4"), SubResource("Resource_jad8y"), SubResource("Resource_ybf3a"), SubResource("Resource_25xkc"), SubResource("Resource_jmcs5"), SubResource("Resource_1bnud"), SubResource("Resource_fv1ho"), SubResource("Resource_wmvw2"), SubResource("Resource_r4o01"), SubResource("Resource_2esct"), SubResource("Resource_wen84"), SubResource("Resource_13eel"), SubResource("Resource_hawg4"), SubResource("Resource_jutus"), SubResource("Resource_vc1bd"), SubResource("Resource_sgvfy"), SubResource("Resource_5ojl4"), SubResource("Resource_hmjm7"), SubResource("Resource_srsp6"), SubResource("Resource_gvjix"), SubResource("Resource_6vxga"), SubResource("Resource_xyr2o"), SubResource("Resource_vmpi6"), SubResource("Resource_q2qxu"), SubResource("Resource_3pa64"), SubResource("Resource_y6ine"), SubResource("Resource_pyidv"), SubResource("Resource_ltduf"), SubResource("Resource_cc0f0"), SubResource("Resource_bb2jn"), SubResource("Resource_7uf8x"), SubResource("Resource_n2qci"), SubResource("Resource_cp0cq"), SubResource("Resource_egrpi"), SubResource("Resource_78boa"), SubResource("Resource_y82qr"), SubResource("Resource_3k60h"), SubResource("Resource_dj8ut"), SubResource("Resource_hgfhx"), SubResource("Resource_pgr6r")])

@@ -1,0 +1,20 @@
+[gd_resource type="Resource" script_class="TacticalMapDefinition" format=3 uid="uid://bpqa0p158ioqk"]
+
+[ext_resource type="Script" uid="uid://brqvnew0mx4kb" path="res://data/tactical/layer_definition.gd" id="1_pmsgu"]
+[ext_resource type="Script" uid="uid://ytawer1dsgif" path="res://data/tactical/tile_definition.gd" id="2_sr7ba"]
+[ext_resource type="TileSet" uid="uid://bxde8owtfteja" path="res://presentation/tactical/tile_sets/tmw_desert_spacing-hd.tres" id="3_lqvsn"]
+[ext_resource type="Script" uid="uid://d1581g8hvu1i6" path="res://data/tactical/map_definition.gd" id="4_8h6d3"]
+[ext_resource type="Resource" uid="uid://cunfurbgg8gx3" path="res://data/tactical/tile_db.tres" id="5_w4ym7"]
+
+[sub_resource type="Resource" id="Resource_w4ym7"]
+script = ExtResource("1_pmsgu")
+name = &"Basis"
+tile_set = ExtResource("3_lqvsn")
+
+[resource]
+script = ExtResource("4_8h6d3")
+tile_db = ExtResource("5_w4ym7")
+layer = SubResource("Resource_w4ym7")
+posible_spawn_pos_team_1 = Array[Vector2i]([Vector2i(4, 5), Vector2i(5, 10), Vector2i(4, 8)])
+posible_spawn_pos_team_2 = Array[Vector2i]([Vector2i(17, 8), Vector2i(17, 7), Vector2i(17, 6)])
+posible_spawn_pos_item = Array[Vector2i]([Vector2i(11, 9), Vector2i(12, 9), Vector2i(12, 10), Vector2i(11, 10), Vector2i(11, 5), Vector2i(12, 5), Vector2i(12, 6), Vector2i(11, 6)])

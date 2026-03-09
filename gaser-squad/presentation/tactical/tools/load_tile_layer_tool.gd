@@ -17,7 +17,7 @@ func _run():
 	dialog.file_mode = EditorFileDialog.FILE_MODE_OPEN_FILE
 	dialog.access = EditorFileDialog.ACCESS_RESOURCES
 	dialog.current_dir = &"res://presentation/tactical"
-	dialog.filters = ["*.tres ; Tile map data"]
+	dialog.filters = ["*.map.tres ; Tile map data"]
 
 	dialog.file_selected.connect(
 		func(path):
