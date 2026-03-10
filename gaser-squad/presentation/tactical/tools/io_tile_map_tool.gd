@@ -15,10 +15,10 @@ static func build_res_from_root_node(root :Node) -> TacticalMapDefinition:
 
 	var map_def_tmp = root.get("map_definition")
 	if map_def_tmp and map_def_tmp is TacticalMapDefinition:
-		print("Map Definition: ", map_def_tmp)
+		print("Map Definition set and used: ", map_def_tmp)
 		map = map_def_tmp
 	else:
-		print("Переменная пуста или не найдена")
+		print("TacticalMapDefinition not set - created")
 		map = TacticalMapDefinition.new()
 
 	if not map.tile_db:
@@ -37,14 +37,8 @@ static func build_res_from_root_node(root :Node) -> TacticalMapDefinition:
 
 		map.layer = _make_layer_def(map, layer)
 
-	#sort
-	map.tile_db.tiles.sort_custom(func(a, b):
-		return String(a.id) < String(b.id)
-		)
-
-
 	return map
-	pass
+	
 
 
 
@@ -102,10 +96,12 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 	var ld : TacticalLayerDefinition = TacticalLayerDefinition.new()
 	ld.tile_set = layer.tile_set
 	ld.name = layer.name
+	ld.layer_type = TacticalLayerDefinition.LayerType.TERRAIN
+
 
 	#prepare tile set
 	var for_find_dubl_ids := {}
-	TileUtils.iterate_all_tiles(ld.tile_set, func(info):
+	TileSetUtils.iterate_all_tiles(ld.tile_set, func(info):
 		#print("%d_(%d_%d)_%d - %s" % [
 					#info.source_id,
 					#info.coord.x,
@@ -132,7 +128,12 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 			tile_def_temp.display_name = "NEED EDIT " + info.custom_id
 			map.tile_db.add_tile(tile_def_temp)
 	)
-
+	# sort
+	map.tile_db.tiles.sort_custom(func(a, b):
+		return String(a.id) < String(b.id)
+		)
+		
+	#---------------------------------------
 
 	#prepare tiles
 	for pos in layer.get_used_cells():
@@ -145,7 +146,7 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 			continue
 
 		# get custom tile id
-		var tile_id = tile_data.get_custom_data(TileUtils.CUSTOM_LAYER_NAME)
+		var tile_id = tile_data.get_custom_data(TileSetUtils.CUSTOM_LAYER_NAME)
 		if tile_id == null:
 			push_error("Tile without tile_id at %s" % pos)
 			return null
@@ -156,8 +157,10 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 			return null
 
 		# store tile data
-
-
+		var tile_ref : = InLayerTileReferenceDefinition.new()
+		tile_ref.tile_pos = pos
+		tile_ref.tile_id = tile_id
+		ld.tile_ids.push_back(tile_ref)
 
 	return ld
 
