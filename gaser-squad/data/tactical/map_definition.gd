@@ -1,3 +1,4 @@
+@tool
 class_name TacticalMapDefinition extends Resource
 
 @export var size : Vector2i

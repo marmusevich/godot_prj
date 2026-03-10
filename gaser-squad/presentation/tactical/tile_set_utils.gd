@@ -1,5 +1,5 @@
 extends RefCounted
-class_name TileUtils
+class_name TileSetUtils
 
 
 const CUSTOM_LAYER_NAME : StringName = &"IDs"
@@ -65,11 +65,11 @@ static func iterate_all_tiles(
 	) -> void:
 
 	if tile_set == null:
-		push_error("TileUtils.iterate_all_tiles(): tile_set is null")
+		push_error("TileSetUtils.iterate_all_tiles(): tile_set is null")
 		return
 
 	if callback == null or not callback.is_valid():
-		push_error("TileUtils.iterate_all_tiles(): callback is null or invalid")
+		push_error("TileSetUtils.iterate_all_tiles(): callback is null or invalid")
 		return
 
 	for source_idx in tile_set.get_source_count():

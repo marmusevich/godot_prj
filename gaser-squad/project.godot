@@ -29,6 +29,15 @@ config/icon="uid://b5imbho2vgmwr"
 
 SceneManager="*uid://tngvtinbnhhq"
 
+[file_customization]
+
+folder_colors={
+"res://data/": "red",
+"res://data/tactical/": "yellow",
+"res://presentation/": "green",
+"res://presentation/tactical/": "yellow"
+}
+
 [input]
 
 move_left={
