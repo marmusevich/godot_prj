@@ -43,9 +43,93 @@ static func build_res_from_root_node(root :Node) -> TacticalMapDefinition:
 
 
 static func build_root_node_from_res(root:Node2D, map:TacticalMapDefinition):
-	pass
+	if not map.tile_db:
+		push_error("tile DB EMPTY, can't load")
+		return
+		
+	root.set("map_definition", map)
+
+	# clear / destroy layers ?
+
+	# create or redefine layer
+	# use map.layer
+	
+	var layer :TileMapLayer = _make_layer_from_def(map.tile_db, map.layer)
+	if not layer :
+		root.add_child(layer)
 
 
+#var spawn_layer := TileMapLayer.new()
+#spawn_layer.name = SPAWN_LAYER_NAME
+#
+## 1. Обязательно назначьте TileSet, иначе слой не сможет хранить тайлы
+#spawn_layer.tile_set = map.tile_set 
+#
+## 2. Добавьте к родителю
+#root.add_child(spawn_layer, true) # true = force_readable_name
+#
+## 3. Заполните данными
+#_load_spawn_place(map, spawn_layer)
+#
+## 4. ВАЖНО: Для сохранения в сцену (если это инструмент редактора)
+#if Engine.is_editor_hint():
+	#spawn_layer.set_owner(root) 
+	# 3. Обновляем UI редактора
+	#editor_interface.get_scene_tree_dock().update_tree()
+	
+	
+	
+	
+	
+#-----------------------------------------------------------------------
+	## 1. Загружаем TileSet
+	#var tile_set := load(tile_set_path) as TileSet
+	#
+	#if not tile_set:
+		#push_error("TileSet not found at: %s" % tile_set_path)
+		#return null
+
+
+#@tool
+#func create_spawn_layer(root: Node, source_tilemap: TileMap) -> TileMapLayer:
+	## Проверка на существование, чтобы не дублировать
+	#var existing = root.get_node_or_null(SPAWN_LAYER_NAME)
+	#if existing:
+		#push_warning("Spawn layer already exists!")
+		#return existing
+	#
+	#var spawn_layer := TileMapLayer.new()
+	#spawn_layer.name = SPAWN_LAYER_NAME
+	#
+	## Копируем настройки тайлсета
+	#if source_tilemap and source_tilemap.tile_set:
+		#spawn_layer.tile_set = source_tilemap.tile_set
+	#else:
+		#push_error("No TileSet found! Layer will be empty.")
+	#
+	## Добавляем в сцену
+	#root.add_child(spawn_layer, true)
+	#
+	## Настраиваем владельца для сохранения (только в редакторе)
+	#if Engine.is_editor_hint():
+		#spawn_layer.set_owner(root)
+		#
+		## Уведомляем редактор об изменениях в сцене
+		## Это нужно, чтобы кнопка "Сохранить" активировалась
+		#var editor_interface = get_editor_interface()
+		#if editor_interface:
+			#editor_interface.get_scene_tree_dock().update_tree()
+	#
+	#return spawn_layer
+
+
+
+	# not (null and empty)
+	if 	not (map.posible_spawn_pos_team_1 and map.posible_spawn_pos_team_1.is_empty()) or not (map.posible_spawn_pos_team_2 and map.posible_spawn_pos_team_2.is_empty()) or not (map.posible_spawn_pos_item and map.posible_spawn_pos_item.is_empty()) :
+		#create or redefine spawn layer
+		var spawn_layer :TileMapLayer = TileMapLayer.new()
+		spawn_layer.name = SPAWN_LAYER_NAME
+		_load_spawn_place(map, spawn_layer)
 
 
 
@@ -89,7 +173,8 @@ static func _save_spawn_place(map :TacticalMapDefinition, spawn_layer :TileMapLa
 			_:
 				push_warning("Unexpected tile_id '&s' at [%s]" % [tile_id, pos])
 
-
+static func _load_spawn_place(map :TacticalMapDefinition, spawn_layer :TileMapLayer):
+	pass
 
 # make layer def
 static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> TacticalLayerDefinition:
@@ -167,37 +252,6 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 
 
 
-
-#static func build_resource_from_layer(layer:TacticalLayerDefinition, db:TacticalTileDatabase) -> MapResource:
-#	var res := MapResource.new()
-#	res.tile_set = layer.tile_set
-#	res.cells = []
-#	var used = layer.get_used_cells()
-#	for pos in used:
-#		var source = layer.get_cell_source_id(pos)
-#		if source == -1:
-#			continue
-
-#		var tile_data = layer.get_cell_tile_data(pos)
-#		if tile_data == null:
-#			continue
-
-#		var tile_id = tile_data.get_custom_data("tile_id")
-#		if tile_id == null:
-#			push_error("Tile without tile_id at %s" % pos)
-#			continue
-
-#		if not db.has_tile(tile_id):
-#			push_error("Tile id %d not in database" % tile_id)
-#			continue
-
-#		var c := CellData.new()
-#		c.position = pos
-#		c.tile_id = tile_id
-#		res.cells.append(c)
-#	return res
-
-
 #static func apply_resource_to_layer(map:MapResource, layer:TacticalLayerDefinition):
 	#layer.clear()
 	#layer.tile_set = map.tile_set
@@ -214,3 +268,19 @@ static func _make_layer_def(map :TacticalMapDefinition, layer :TileMapLayer) -> 
 					#if data and data.get_custom_data("tile_id") == id:
 						#layer.set_cell(pos, source_id, coord)
 						#break
+
+
+
+static func _make_layer_from_def(tile_db :TacticalTileDatabase, ld :TacticalLayerDefinition) -> TileMapLayer:
+	return null
+	
+	#clear()
+	#
+	#for y in range(map.size()):
+		#for x in range(map[y].size()):
+			#if map[y][x] == 1:
+				#set_cell(Vector2i(x, y), 0, TILE_WALL)
+			#if map[y][x] == 2:
+				#set_cell(Vector2i(x, y), 0, TILE_START_POINT)
+			#if map[y][x] == 3:
+				#set_cell(Vector2i(x, y), 0, TILE_END_POINT)	
